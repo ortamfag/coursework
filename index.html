@@ -79,8 +79,79 @@
             </div>
 
             <div class="portfolio__footer flex">
-                <button class="portfolio__button">Добавить</button>
+                <button class="portfolio__button" id="modal-1-btn">Добавить</button>
             </div>
+
+            <!-- modals -->
+				<div class="modal-wrapper" id="modal-1">
+					<div class="modal-wrapper__bg">
+						<div class="modal__close">
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+
+					<div class="container">
+						<div class="modal">
+							<div class="modal__inner">
+                                <h1 class="modal__title">Заполните ваше портфолио</h1>
+
+                                <div class="flex">
+                                    <p class="modal-form-paragraph paragraph-1">Ваше ФИО:</p>
+                                        <form name="laboratory" method="post">
+                                            <input type="text" size="80"> 
+                                        </form>
+                                </div>
+                                
+                                <div class="flex">
+                                    <p class="modal-form-paragraph paragraph-2">Ваша учебная группа:
+                                        <form name="laboratory" method="post">
+                                            <input type="text" size="80"> 
+                                        </form>
+                                    </div>
+                                
+                                <div class="flex">
+                                    <p class="modal-form-paragraph paragraph-3">Ваше направление:
+                                        <form name="laboratory" method="post">
+                                            <input type="text" size="80"> 
+                                        </form>
+                                    </div>
+                                
+                                <div class="flex">
+                                    <p class="modal-form-paragraph paragraph-4">Ваш вид деятельности:
+                                        <form name="laboratory" method="post">
+                                            <input type="text" size="80"> 
+                                        </form>
+                                    </div>
+                                
+                                <div class="flex">
+                                    <p class="modal-form-paragraph paragraph-5">Ваш куратор:
+                                        <form name="laboratory" method="post">
+                                            <input type="text" size="80"> 
+                                        </form>
+                                    </div>
+
+                                <div class="flex">
+                                    <p class="modal-form-paragraph paragraph-6">Ваш заказчик (если есть):
+                                        <form name="laboratory" method="post">
+                                            <input type="text" size="80"> 
+                                        </form>
+                                </div>    
+                                
+                                <div class="flex">
+                                <p class="modal-form-paragraph paragraph-7">Ваша лаборатория (если есть):
+                                    <form name="laboratory" method="post">
+                                        <input type="text" size="80"> 
+                                    </form>
+                                </div>
+
+                                <div class="modal__footer flex">
+                                    <button class="modal__button">Добавить</button>
+                                </div>
+                            </div>
+						</div>
+					</div>
+				</div>
 
 
         </section>
@@ -113,6 +184,6 @@
         </div>
 
     </footer>
-    
+    <script src="js/script.js"></script>
 </body>
 </html>
