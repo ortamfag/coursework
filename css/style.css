@@ -138,6 +138,32 @@
 	grid-template-columns: 1fr 1fr 1fr;
 	justify-items: center;
 }
+
+.portfolio__footer{
+	justify-content: center;
+
+	margin-top: 9rem;
+}
+
+.portfolio__button{
+	background-color: #000000;
+	color: white;
+	font-size: 36px;
+
+	height: 75px;
+	width: 330px;
+	border-radius: 20px;
+	border: 1px solid #000000;
+	cursor: pointer;
+
+	margin-bottom: 100px;
+}
+
+.portfolio__button:hover{
+	background-color: #FFFFFF;
+	color: black;
+	transition: 0.4s;
+}
 /*portfolio*/
 
 /*wrapper*/
@@ -195,3 +221,47 @@
 	margin-top: 60px;
 }
 /*wrapper*/
+
+/*footer*/
+.footer{
+	background-color: black;
+	color: white;
+	padding-bottom: 50px;
+}
+
+.footer__contacts{
+	flex-direction: column;
+	margin-left: 2rem;
+	margin-top: 4rem;
+}
+
+.footer__title{
+	font-weight: 400;
+	margin-bottom: 40px;
+}
+
+.footer__inner{
+	justify-content: space-between;
+}
+
+.footer__paragraph{
+	margin-bottom: 20px;
+}
+
+.footer__info{
+	flex-direction: column;
+	margin-top: 2.5rem;
+}
+
+.footer__social{
+	align-self: center;
+	margin-top: 20px;
+}
+
+.footer__social-item{
+	margin-right: 20px;
+	width: 40px;
+	height: 40px;
+	align-self: center;
+}
+/*footer*/
