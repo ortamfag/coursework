@@ -33,6 +33,38 @@
 	width: 100%;
 }
 
+/* boostrap container */
+.container {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@media (min-width: 576px) {
+	.container {
+		max-width: 540px;
+	}
+}
+@media (min-width: 768px) {
+	.container {
+		max-width: 720px;
+	}
+}
+@media (min-width: 992px) {
+	.container {
+		max-width: 960px;
+	}
+}
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1140px;
+	}
+}
+/* /bootstrap container */
+
+
 /*header*/
 .header{
 	background-color: #000000;
@@ -48,6 +80,7 @@
 
 .header__title{
 	font-size: 36px;
+	font-weight: 400;
 
 	align-self: center;
 	margin-right: 20px;
@@ -65,3 +98,100 @@
 	align-self: center;
 }
 /*header*/
+
+/*about*/
+.about__title{
+	text-align: center;
+	font-size: 40px;
+	font-weight: 400;
+
+	margin-top: 8rem;
+}
+
+.about__paragraph{
+	text-align: center;
+	margin-top: 25px;
+	font-size:18px;
+
+	margin-right: 10rem;
+	margin-left: 10rem;
+}
+
+.about__img{
+	justify-content: center;
+	margin-top: 40px;
+}
+/*about*/
+
+/*portfolio*/
+.portfolio__h1{
+	text-align: center;
+	font-weight: 400;
+	font-size: 40px;
+
+	margin-top: 6rem;
+	margin-bottom: 75px;
+}
+
+.portfolio__main{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-items: center;
+}
+/*portfolio*/
+
+/*wrapper*/
+.wrapper{
+	width: 400px;
+
+	border: 1px solid #a9a9a9;
+	border-radius: 10px;
+
+	margin-top: 80px;
+
+}
+.wrapper__name{
+	font-size: 30px;
+	font-weight: 400;
+
+	width: 230px;
+
+	margin: 0 auto;
+	text-align: center;
+
+	margin-bottom: 70px;
+	margin-top: 40px;
+}
+
+.wrapper__paragraph{
+	margin-bottom: 10px;
+	font-size: 18px;
+	margin-left: 10px;
+}
+
+.wrapper__button{
+	width: 150px;
+	height: 35px;
+
+	border-radius: 20px;
+	background-color: #000000;
+	color: white;
+	border: 0px;
+
+	cursor: pointer;
+	margin-bottom: 30px;
+}
+
+.wrapper__button:hover{
+	background-color: #FFFFFF;
+	color: black;
+	border: 1px solid black;
+
+	transition: 0.4s;
+}
+
+.wrapper__footer{
+	justify-content: center;
+	margin-top: 60px;
+}
+/*wrapper*/
