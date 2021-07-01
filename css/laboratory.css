@@ -100,11 +100,34 @@
 }
 /*header*/
 
+/*main*/
+.main__title{
+	font-size: 40px;
+	font-weight: 400;
+	margin-top: 4rem;
+	margin-bottom: 5rem;
+
+	text-align: center;
+}
+
+.main__item{
+	margin-bottom: 20px;
+	font-size: 20px;
+}
+
+.main__list{
+	list-style: circle;
+	margin-left: 3rem;
+	margin-bottom: 5rem;
+}
+/*main*/
+
 /*footer*/
 .footer{
 	background-color: black;
 	color: white;
 	padding-bottom: 50px;
+	margin-top: 20rem;
 }
 
 .footer__contacts{
