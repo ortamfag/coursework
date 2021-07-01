@@ -8,6 +8,47 @@
 
 }
 
+.body{
+	font-family: 'Roboto', sans-serif;
+}
+
 .flex {
 	display: flex;
 }
+
+.link{
+	cursor: pointer;
+}
+
+/*header*/
+.header{
+	background-color: #000000;
+	justify-content: space-between;
+	color: white;
+
+	height: 120px;
+}
+
+.header__inner{
+	margin-left: 40px;
+}
+
+.header__title{
+	font-size: 36px;
+
+	align-self: center;
+	margin-right: 20px;
+}
+
+.nav__list li{
+	display: inline;
+}
+
+.nav__item{
+	padding-right: 50px;	
+}
+
+.nav__list{
+	align-self: center;
+}
+/*header*/
