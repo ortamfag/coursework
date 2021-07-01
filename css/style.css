@@ -16,6 +16,7 @@
 	cursor: pointer;
 	position: relative;
 	text-decoration: none; 
+	color: white;
 }
 
 .link:after{
@@ -427,6 +428,14 @@ input[type=text] {
 
 	margin-top: 20px;
 	margin-bottom: 40px;
+}
+
+.modal__button:hover{
+	background-color: #FFFFFF;
+	color: black;
+	border: 1px solid black;
+
+	transition: 0.4s;
 }
 /* /modal */
 /*modals*/
