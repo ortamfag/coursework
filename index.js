@@ -2,7 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const path = require('path')
 const exphbs = require('express-handlebars')
-const portfolioRoutes = require('./routes/portfolio')
+const portfolioRoutes = require('./routes/portfolio.js')
 
 const PORT = process.env.PORT || 3000
 
@@ -18,8 +18,9 @@ app.set('views', 'views')
 
 app.use(express.urlencoded({extended: true}))
 app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'img')))
 
-//добавить app.use(portfolioRoutes)
+app.use(portfolioRoutes)
 
 async function start() {
     try{
