@@ -18,3 +18,24 @@ app.set('views', 'views')
 
 app.use(express.urlencoded({extended: true}))
 app.use(express.static(path.join(__dirname, 'public')))
+
+app.use(portfolioRoutes)
+
+async function start() {
+    try{
+        await mongoose.connect(
+            'mongodb+srv://ortamfag:1QAZxsw23edc@portfolio.7ks7u.mongodb.net/portfolio',
+            {
+                useNewUrlParser: true,
+                useFindAndModify: false
+            }
+        )
+        app.listen(PORT, () => {
+            console.log("Server has been started...")
+        })
+    } catch(e){
+        console.log(e)
+    }
+}
+
+start()
