@@ -388,7 +388,7 @@ input[type=text] {
 }
 
 .modal__close div {
-	background: #000000;
+	background: #CC0000;
 	border-radius: 5px;
 
 	width: 30px;

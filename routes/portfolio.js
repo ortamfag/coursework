@@ -20,7 +20,7 @@ router.get('/create', (req, res) => {
     })
 })
 
-router.post('/create', async (req,res) => {
+router.post('/create', async (req, res) => {
     const portfolio = new Portfolio({
         title: req.body.title,
         NSP: req.body.NSP,
@@ -38,6 +38,18 @@ router.get('/laboratory', (req, res) => {
     res.render('laboratory', {
         title: 'Laboratory'
     })
+})
+
+router.post('/laboratory', async (req, res) => {
+    const laboratory = new Laboratory({
+        title: req.body.title,
+        faculty: req.body.faculty,
+        number: req.body.number,
+        curators: req.body.curators
+    })
+
+    await laboratory.save()
+    res.redirect('/laboratory')
 })
 
 
