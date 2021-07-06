@@ -1,5 +1,7 @@
 const { Router } = require('express')
 const Portfolio = require('../models/Portfolio')
+//const Laboratory = require('../models/Laboratory')
+//const curator = require('../models/Curator')
 const router = Router()
 
 router.get('/', async (req,res) => {
@@ -30,6 +32,12 @@ router.post('/create', async (req,res) => {
 
     await portfolio.save()
     res.redirect('/')
+})
+
+router.get('/laboratory', (req, res) => {
+    res.render('laboratory', {
+        title: 'Laboratory'
+    })
 })
 
 
