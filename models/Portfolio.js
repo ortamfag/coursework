@@ -6,6 +6,11 @@ const schema = new Schema({
         required: true
     },
 
+    NSP: {
+        type: String,
+        required: true
+    },
+
     group: {
         type: String,
         required: true
@@ -21,10 +26,6 @@ const schema = new Schema({
     },
 
     curator: {
-        type: String
-    },
-
-    team: {
         type: String
     },
 
