@@ -23,19 +23,29 @@
                 <h1 class="portfolio__h1">Портфолио студентов</h1>
             </div>
 
+            {{#if portfolios.length}}
+            
             <div class="portfolio__main">
                 <div class="wrapper">
+                    {{#each user}}
                     <h2 class="wrapper__name"></h2>
+                    {{/each}}
 
-                    <p class="wrapper__paragraph"></p>
-                    <p class="wrapper__paragraph"></p>
-                    <p class="wrapper__paragraph"></p>
+                    {{#each portfolios}}
+                    <p class="wrapper__paragraph">Группа: {{group}}</p>
+                    <p class="wrapper__paragraph">Направление: {{faculty}}</p>
+                    <p class="wrapper__paragraph">Название: {{title}}</p>
+                    {{/each}}
 
                     <div class="wrapper__footer flex">
                         <button class="wrapper__button">Перейти</button>
                     </div>
                 </div>
             </div>
+
+            {{else}}
+            <p class="wrapper__paragraph">Нет портфолио</p>
+            {{/if}}
 
             <div class="portfolio__footer flex">
                 <button class="portfolio__button">Добавить</button>
