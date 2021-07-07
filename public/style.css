@@ -300,9 +300,11 @@ input[type=text] {
 
 .modal-form-paragraph{
 	font-size: 18px;
-
-	margin-bottom: 40px;
 	margin-left: 20px;
+}
+
+.modal__div{
+	margin-bottom: 30px;
 }
 
 .modals__button{
