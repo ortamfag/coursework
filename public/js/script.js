@@ -11,4 +11,5 @@ const makeModal = modalSel => {
 }
 
 makeModal('#modal-1');
+makeModal('#modal-й');
 // end modals
