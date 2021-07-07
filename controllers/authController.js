@@ -6,6 +6,16 @@ const Role = require ('../models/Role')
 class authController {
     async registration(req,res) {
         try{
+            const {username, password} = req.body
+            const candidate = await User.findOne({username})
+            if(candidate) {
+                return res.status(400).json({message: "Пользователь с таким именем уже существует"})
+            }
+
+            const userRole = await Role.findOne({value: "USER"})
+            const user = new User({username, password, roles: [userRole.value]})
+            await user.save()
+            return res.json({message: "Пользователь успешно зарегистрирован"})
 
         } catch(e){
             console.log(e)
