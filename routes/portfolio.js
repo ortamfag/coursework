@@ -1,6 +1,6 @@
 const { Router } = require('express')
 const Portfolio = require('../models/Portfolio')
-//const Laboratory = require('../models/Laboratory')
+const Laboratory = require('../models/Laboratory')
 //const curator = require('../models/Curator')
 const router = Router()
 
@@ -34,9 +34,12 @@ router.post('/create', async (req, res) => {
     res.redirect('/')
 })
 
-router.get('/laboratory', (req, res) => {
+router.get('/laboratory', async (req, res) => {
+    const laboratories = await Laboratory.find({}).lean()
+
     res.render('laboratory', {
-        title: 'Laboratory'
+        title: 'Laboratory',
+        laboratories
     })
 })
 
@@ -49,7 +52,7 @@ router.post('/laboratory', async (req, res) => {
     })
 
     await laboratory.save()
-    res.redirect('/laboratory')
+    res.redirect('/')
 })
 
 

@@ -1,9 +1,12 @@
 <h1 class="laboratory__title">Список лабораторий проектной деятельности</h1>
 
+        
         <ul class="laboratory__list">
-            <li class="laboratory__item">Лаборатория внутренней разработки</li>
-            <li class="laboratory__item">Лаборатория внешней разработки</li>
-            <li class="laboratory__item">Лаборатория веб-студия</li>
+            {{#each laboratories}}
+
+            <li class="laboratory__item">{{title}}</li>
+            
+            {{/each}}
         </ul>
 
         <div class="portfolio__footer flex">
@@ -22,33 +25,35 @@
 					<div class="container">
 						<div class="modal">
 							<div class="modal__inner">
-                                <h1 class="modal__title">Заполните данные о лаборатории</h1>
+                                <form action="/laboratory" method="POST">
+                                    <h1 class="modal__title">Заполните данные о лаборатории</h1>
 
-                                <div class="flex">
-                                    <p class="modal-form-paragraph paragraph-1">Название:</p>
-                                    <input type="text" size="80" name="title"> 
+                                    <div class="flex">
+                                        <p class="modal-form-paragraph paragraph-1">Название:</p>
+                                        <input type="text" size="80" name="title"> 
+                                    </div>
+                                    
+                                    <div class="flex">
+                                        <p class="modal-form-paragraph paragraph-2">Направление:
+                                        <input type="text" size="80" name="faculty">     
+                                    </div>
+                                    
+                                    <div class="flex">
+                                        <p class="modal-form-paragraph paragraph-3">Количество проектов:
+                                        <input type="text" size="80" name="number">  
+                                    </div>
+                                    
+                                    <div class="flex">
+                                        <p class="modal-form-paragraph paragraph-4">Число кураторов в лаборатории:
+                                        <input type="text" size="80" name="curators">    
+                                    </div>
                                 </div>
-                                
-                                <div class="flex">
-                                    <p class="modal-form-paragraph paragraph-2">Направление:
-                                    <input type="text" size="80" name="faculty">     
-                                </div>
-                                
-                                <div class="flex">
-                                    <p class="modal-form-paragraph paragraph-3">Количество проектов:
-                                    <input type="text" size="80" name="number">  
-                                </div>
-                                
-                                <div class="flex">
-                                    <p class="modal-form-paragraph paragraph-4">Число кураторов в лаборатории:
-                                    <input type="text" size="80" name="curators">    
-                                </div>
-                            </div>
 
-                                <div class="modal__footer flex">
-                                    <button class="modals__button">Добавить</button>
+                                    <div class="modal__footer flex">
+                                        <button class="modals__button" type="submit">Добавить</button>
+                                    </div>
                                 </div>
-                            </div>
+                            </form>
 						</div>
 					</div>
 				</div>

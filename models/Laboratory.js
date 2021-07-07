@@ -20,4 +20,4 @@ const schema = new Schema({
     }
 })
 
-module.exports = model('Portfolio', schema)
+module.exports = model('Laboratory', schema)
