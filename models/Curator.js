@@ -1,10 +1,6 @@
 const {Schema, model} = require('mongoose')
 
 const schema = new Schema({
-    title: {
-        type: String,
-        required: true
-    },
 
     name: {
         type: String,
@@ -23,4 +19,4 @@ const schema = new Schema({
 
 })
 
-module.exports = model('Portfolio', schema)
+module.exports = model('Curator', schema)

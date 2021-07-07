@@ -1,7 +1,7 @@
 const { Router } = require('express')
 const Portfolio = require('../models/Portfolio')
 const Laboratory = require('../models/Laboratory')
-//const curator = require('../models/Curator')
+const Curator = require('../models/Curator')
 const router = Router()
 
 router.get('/', async (req,res) => {
@@ -16,7 +16,7 @@ router.get('/', async (req,res) => {
 
 router.get('/create', (req, res) => {
     res.render('create', {
-        title: 'Create Portfolio'
+        title: 'Создать портфолио'
     })
 })
 
@@ -38,7 +38,7 @@ router.get('/laboratory', async (req, res) => {
     const laboratories = await Laboratory.find({}).lean()
 
     res.render('laboratory', {
-        title: 'Laboratory',
+        title: 'Лаборатории',
         laboratories
     })
 })
@@ -55,6 +55,26 @@ router.post('/laboratory', async (req, res) => {
     res.redirect('/')
 })
 
+router.get('/curator', async (req, res) => {
+    const curators = await Curator.find({}).lean()
+    
+    res.render('curator', {
+        title: 'Кураторы',
+        curators
+    })
+})
+
+router.post('/curator', async (req, res) => {
+    const curator = new Curator({
+        
+        name: req.body.name,
+        project: req.body.project,
+        laboratory: req.body.laboratory
+    })
+
+    await curator.save()
+    res.redirect('/')
+})
 
 
 module.exports = router
