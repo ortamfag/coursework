@@ -63,8 +63,11 @@ class authController {
             //await userRole.save()
             //await adminRole.save()
 
-            res.json('server work')
+            const users = await User.find()
+            res.json(users)
+
         } catch(e){
+            console.log(e)
             
         }
     }
