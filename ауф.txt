@@ -1,0 +1,2 @@
+//добавить app.use(portfolioRoutes) в index.js
+//добавить якорные ссылки в navbar.hbs

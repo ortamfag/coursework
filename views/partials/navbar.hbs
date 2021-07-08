@@ -1,0 +1,32 @@
+<header class="header flex">
+        <div class="header__inner flex">
+            <h1 class="header__title">
+                PolyPortfolio
+            </h1>
+
+            <img src="logo.svg">
+        </div>
+
+        <nav class="nav flex">
+            <ul class="nav__list">
+
+                {{#if isIndex}}
+                <li class="nav__item"><a class="link" href="/laboratory">Лаборатории</a></li>
+                <li class="nav__item"><a class="link" href="/">Главная</a></li>
+                <li class="nav__item"><a class="link" href="/curator">Кураторы</a></li>
+                <li class="nav__item"><a class="link" href="/create">Портфолио</a></li>
+                {{else}}
+                <li class="nav__item"><a class="link" href="/laboratory">Лаборатории</a></li>
+                <li class="nav__item"><a class="link" href="/">Главная</a></li>
+                <li class="nav__item"><a class="link" href="/curator">Кураторы</a></li>
+                {{/if}}
+            </ul>
+        </nav>
+
+        <div class="header__registration flex">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="link" href="/enter">Войти</a></li>
+                <li class="nav__item"><a class="link" href="/registration">Регистрация</a></li>
+            </ul>
+        </div>
+    </header>

@@ -1,0 +1,31 @@
+{
+  "name": "coursework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ortamfag/coursework.git"
+  },
+  "author": "ortamfag",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ortamfag/coursework/issues"
+  },
+  "homepage": "https://github.com/ortamfag/coursework#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2",
+    "express-validator": "^6.12.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
+  }
+}

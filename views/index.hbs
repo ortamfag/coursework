@@ -1,0 +1,56 @@
+<main class="main">
+        <section id="about">
+
+            <div class="about__inner">
+                <h1 class="about__title">О нас</h1>
+                <p class="about__paragraph">Портфолио - это визитная карточка, то есть совокупность сведений о человеке; досье, собрание документов, образцов работ, фотографий,
+                    дающих представление о возможностях, способностях специалиста.</p>
+                    
+                <p class="about__paragraph">Создание портфолио – интересный и творческий процесс, позволяющий 
+                    собрать в одном месте результаты, достигнутые студентом в разнообразных видах деятельности 
+                    (учебной, творческой, общественной) за время обучения, систематизировать их и представить в самом выгодном свете.
+                    Целью портфолио является максимальное раскрытие индивидуальных возможностей каждого студента, развитие мотивации к непрерывному обучению, повышение самооценки.</p>
+                    
+            </div>
+
+            <div class="about__img flex">
+                <img src="about.png">
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <div class="portfolio__inner">
+                <h1 class="portfolio__h1">Портфолио студентов</h1>
+            </div>
+
+            {{#if portfolios.length}}
+            
+            <div class="portfolio__main">
+                {{#each portfolios}}
+                <div class="wrapper">
+                    
+                    <h2 class="wrapper__name">{{NSP}}</h2>
+                    
+                    <p class="wrapper__paragraph">Группа: {{group}}</p>
+                    <p class="wrapper__paragraph">Направление: {{faculty}}</p>
+                    <p class="wrapper__paragraph">Название: {{title}}</p>
+                    <p class="wrapper__paragraph">Куратор: {{curator}}</p>
+                    <p class="wrapper__paragraph">Лаборатория: {{laboratory}}</p>
+                    <p class="wrapper__paragraph">Заказчик: {{customer}}</p>
+                    
+
+                    <div class="wrapper__footer flex">
+                        <button class="wrapper__button" id="modal-2-btn">Перейти</button>
+                    </div>
+                    
+                </div>
+                {{/each}}
+            </div>
+
+            {{else}}
+            <p class="wrapper__paragraph">Нет портфолио</p>
+            {{/if}}
+
+            <div class="portfolio__footer flex">
+                <a href="/create"><button class="portfolio__button">Добавить</button></a>
+            </div>

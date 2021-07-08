@@ -1,0 +1,56 @@
+<h1 class="laboratory__title">Список кураторов проектной деятельности</h1>
+
+        
+        <ul class="laboratory__list">
+            {{#each curators}}
+
+            <li class="laboratory__item">{{name}}</li>
+            
+            {{/each}}
+        </ul>
+
+        <div class="portfolio__footer flex">
+                <button class="portfolio__button" id="modal-1-btn">Добавить</button>
+        </div>
+
+        <!-- modals -->
+				<div class="modal-wrapper" id="modal-1">
+					<div class="modal-wrapper__bg">
+						<div class="modal__close">
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+
+					<div class="container">
+						<div class="modal">
+							<div class="modal__inner">
+                                <form action="/curator" method="POST">
+                                    <h1 class="modal__title">Заполните данные о кураторе</h1>
+
+                                    <div class="flex modal__div">
+                                        <p class="modal-form-paragraph paragraph-1">Имя:</p>
+                                        <input type="text" size="50" name="name"> 
+                                    </div>
+                                    
+                                    <div class="flex modal__div">
+                                        <p class="modal-form-paragraph paragraph-2">Проект под руководством:
+                                        <input type="text" size="50" name="project">     
+                                    </div>
+                                    
+                                    <div class="flex modal__div">
+                                        <p class="modal-form-paragraph paragraph-3">Принадлежность к лаборатории:
+                                        <input type="text" size="50" name="laboratory">  
+                                    </div>
+                                </div>
+
+                                    <div class="modal__footer flex">
+                                        <button class="modals__button" type="submit">Добавить</button>
+                                    </div>
+                                </div>
+                            </form>
+						</div>
+					</div>
+				</div>
+
+
