@@ -5,6 +5,9 @@ const jwt = require('jsonwebtoken')
 const {validationResult} = require('express-validator')
 const {secret} = require ("../config")
 
+const signinLogger = require('../loggers/signinLogger');
+const signupLogger = require('../loggers/signupLogger');
+
 const generateAccessToken = (id, roles) => {
     const payload = {
         id,
@@ -30,6 +33,9 @@ class authController {
             const userRole = await Role.findOne({value: "USER"})
             const user = new User({username, password: hashPassword, roles: [userRole.value]})
             await user.save()
+
+            signupLogger(user);
+
             return res.json("Пользователь успешно зарегистрирован")
         } catch (e) {
             console.log(e)
@@ -49,7 +55,11 @@ class authController {
                 return res.status(400).json({message: `Введен неверный пароль`})
             }
             const token = generateAccessToken(user._id, user.roles)
+
+            signinLogger(user);
+
             return res.json("Вы успешно вошли в аккаунт")
+
         } catch (e) {
             console.log(e)
             res.status(400).json({message: 'Login error'})
