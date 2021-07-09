@@ -76,16 +76,4 @@ router.post('/curator', async (req, res) => {
     res.redirect('/')
 })
 
-router.get('/enter', (req, res) => {
-    res.render('enter', {
-        title: 'Войти в аккаунт'
-    })
-})
-
-router.get('/registration', (req, res) => {
-    res.render('registration', {
-        title: 'Зарегистрироваться'
-    })
-})
-
 module.exports = router

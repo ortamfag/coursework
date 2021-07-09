@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, 'js')))
 app.use(express.json())
 
 app.use(portfolioRoutes)
-app.use('/auth', authRouter)
+app.use(authRouter)
 
 async function start() {
     try{
