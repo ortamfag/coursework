@@ -505,3 +505,75 @@ input[type=text] {
 	margin-bottom: 5rem;
 }
 /*Laboratory*/
+
+@media (max-width: 1000px) {
+	.header{
+		flex-direction: column;
+		width: 100%;
+		height: 100%;
+		justify-content: center;
+	}
+
+	.header__inner{
+		width: 100%;
+		margin-right: 0px;
+		margin-left: 0px;
+		justify-content: center;
+		padding-left: 4rem;
+	}
+
+	.nav__list li{
+		display: block;
+		text-align: center;
+		padding: 10px;
+		
+	}
+
+	.nav{
+		justify-content: center;
+	}
+
+	.header__registration{
+		justify-content: center;
+		margin-bottom: 2rem;
+	}
+
+	.about__img{
+		display: none
+	}
+
+	.about__title{
+		margin-top: 2rem;
+	}
+
+	.portfolio__main{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.portfolio__h1{
+		margin-bottom: 0px;
+	}
+
+	.footer__inner{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.footer__contacts{
+		text-align: center;
+	}
+
+	.footer__paragraph{
+		text-align: center;
+		align-self: center;
+	}
+
+	.footer__img{
+		width: 40%;
+		height: 40%;
+
+		align-self: center;
+	}
+}
