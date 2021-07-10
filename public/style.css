@@ -602,6 +602,16 @@ input[type=text] {
 	.portfolio__h1{
 		margin-right: 1rem;
 		margin-left: 1rem;
+		margin-bottom: 1rem;
 	}
+
+	.main__button{
+		font-size: 21px;
+		width: 240px;
+		margin-right: 0px;
+	}
+
+
+
 
 }
