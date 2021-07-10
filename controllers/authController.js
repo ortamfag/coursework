@@ -5,6 +5,9 @@ const jwt = require('jsonwebtoken')
 const {validationResult} = require('express-validator')
 const {secret} = require ("../config")
 
+const signinLogger = require('../loggers/signinLogger');
+const signupLogger = require('../loggers/signupLogger');
+
 const generateAccessToken = (id, roles) => {
     const payload = {
         id,
@@ -27,10 +30,12 @@ class authController {
                 return res.status(400).json({message: "Пользователь с таким именем уже существует"})
             }
             const hashPassword = bcrypt.hashSync(password, 7);
-            const userRole = await Role.findOne({value: "USER"})
-            const user = new User({username, password: hashPassword, roles: [userRole.value]})
+            const user = new User({username, password: hashPassword,})
             await user.save()
-            return res.json({message: "Пользователь успешно зарегистрирован"})
+            
+            signupLogger(user);
+
+            return res.json("Пользователь успешно зарегистрирован")
         } catch (e) {
             console.log(e)
             res.status(400).json({message: 'Registration error'})
@@ -49,7 +54,11 @@ class authController {
                 return res.status(400).json({message: `Введен неверный пароль`})
             }
             const token = generateAccessToken(user._id, user.roles)
-            return res.json({token})
+
+            signinLogger(user);
+
+            return res.json("Вы успешно вошли в аккаунт")
+
         } catch (e) {
             console.log(e)
             res.status(400).json({message: 'Login error'})
