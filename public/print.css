@@ -1,0 +1,37 @@
+@media print {
+    @page {
+        margin: 1cm;
+    }
+
+    .about__img{
+        display: none;
+    }
+
+    .portfolio__footer{
+        display: none;
+    }
+
+    .nav{
+        display: none;
+    }
+
+    .header__img{
+        display: none;
+    }
+
+    .header__registration{
+        display: none;
+    }
+
+    .footer__info{
+        display: none;
+    }
+
+    .portfolio__h1{
+        page-break-before: always;
+    }
+
+
+
+
+}

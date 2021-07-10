@@ -30,10 +30,9 @@ class authController {
                 return res.status(400).json({message: "Пользователь с таким именем уже существует"})
             }
             const hashPassword = bcrypt.hashSync(password, 7);
-            const userRole = await Role.findOne({value: "USER"})
-            const user = new User({username, password: hashPassword, roles: [userRole.value]})
+            const user = new User({username, password: hashPassword,})
             await user.save()
-
+            
             signupLogger(user);
 
             return res.json("Пользователь успешно зарегистрирован")
