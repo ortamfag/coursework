@@ -563,6 +563,7 @@ input[type=text] {
 
 	.footer__contacts{
 		text-align: center;
+		margin-right: 2rem;
 	}
 
 	.footer__paragraph{
@@ -576,4 +577,31 @@ input[type=text] {
 
 		align-self: center;
 	}
+
+	.about__paragraph{
+		margin-right: 2rem;
+		margin-left: 2rem;
+	}
+}
+
+@media (max-width: 412px) {
+
+	.wrapper{
+		width: 300px;
+	}
+
+	.header__img{
+		display: none;
+	}
+
+	.header__title{
+		margin-right: 3rem;
+		margin-bottom: 1rem;
+	}
+
+	.portfolio__h1{
+		margin-right: 1rem;
+		margin-left: 1rem;
+	}
+
 }
